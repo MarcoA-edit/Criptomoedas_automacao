@@ -1,29 +1,41 @@
-# 📩 Automacao de Envio de Valores de Criptomoedas
+# 📊 Monitoramento e Envio de Relatório de Criptomoedas
 
-## 📌 Descricao
-Este projeto automatiza o envio de um relatorio com os valores de criptomoedas por e-mail. Ele coleta os dados, gera um arquivo CSV e envia automaticamente para um ou mais destinatarios via SMTP.
+## 📌 Descrição
+Este projeto automatiza a coleta, análise e envio de um relatório contendo informações sobre as principais criptomoedas. Ele obtém os dados em tempo real, gera um arquivo CSV e envia automaticamente para os destinatários.
 
 ## 🛠 Tecnologias Utilizadas
 - **Python**
-- **Bibliotecas:** `smtplib`, `email.mime`, `mimetypes`
+- **Bibliotecas:** `pycoingecko`, `pandas`, `smtplib`, `email.mime`, `mimetypes`
 
 ## 🚀 Como Funciona
-1. **Gera um relatorio** com os valores de criptomoedas em formato CSV.
-2. **Configura o servidor SMTP** para enviar e-mails via Gmail.
-3. **Anexa o relatorio** e envia para os destinatarios.
+1. **Coleta de dados**:
+   - Obtém os valores das criptomoedas na Binance via `ccxt`.
+   - Obtém dados do token KARATE via `pycoingecko`.
+2. **Gera um relatório CSV** contendo:
+   - Nome da criptomoeda
+   - Valor atual em USD
+   - Percentual de valorização/queda nas últimas 24h
+   - Data e hora da última atualização
+   - Indicador de tendência (🔼 Subindo | 🔽 Caindo)
+3. **Envia o relatório por e-mail** para um ou mais destinatários via SMTP.
 
-## 📄 Dependencias
-Antes de executar o projeto, instale as dependencias necessarias:
+## 📄 Dependências
+Antes de executar o projeto, instale as dependências necessárias:
 ```bash
-pip install requests
+pip install pycoingecko pandas
 ```
 
-## 🔧 Configuracao
+## 🔧 Configuração
+### Coleta de Dados
+- A API da Binance é usada para coletar dados de: `BTC`, `ETH`, `BNB`, `ADA`, `SOL`, `HBAR`, `DOGE`.
+- O CoinGecko é utilizado para coletar dados do token `KARATE`.
+- Fique a vontade para adicionar ou remover os seus tokens de preferência.
+
+### Envio por E-mail
 1. **Crie uma senha de aplicativo no Google**
    - Acesse: [Google App Passwords](https://myaccount.google.com/apppasswords)
    - Selecione "E-mail" e "Computador Windows" (ou sistema correspondente)
    - Gere e copie a senha
-
 2. **Edite o arquivo Python**
    ```python
    EMAIL = "seu_email@gmail.com"
@@ -32,21 +44,25 @@ pip install requests
    ```
 
 ## ▶️ Executando o Projeto
-Basta rodar o script principal:
-```bash
-python envia_cripto.py
-```
+1. **Gerar o relatório CSV**:
+   ```bash
+   python moni_cripto.py
+   ```
+2. **Enviar por e-mail**:
+   ```bash
+   python envia_cripto.py
+   ```
 
 ## 📧 Exemplo de Envio
-O script enviara um e-mail com o seguinte conteudo:
+O script enviará um e-mail com o seguinte conteúdo:
 ```
 De: seu_email@gmail.com
 Para: destinatario@example.com
-Assunto: Relatorio de Cripto Moedas
-Conteudo: Segue em anexo o relatorio de valorizacao de criptomoedas.
+Assunto: Relatório de Cripto Moedas
+Conteúdo: Segue em anexo o relatório de valorização de criptomoedas.
 ```
 
-## 🏆 Contribuicao
+## 🏆 Contribuição
 Sinta-se livre para contribuir! Envie PRs ou abra issues para melhorias.
 
 ---
