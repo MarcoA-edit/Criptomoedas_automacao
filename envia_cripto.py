@@ -8,8 +8,8 @@ import mimetypes
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
-EMAIL = "marco.edit01@gmail.com"
-SENHA_DE_APP = "nsts mlhf ldjy stcy"
+EMAIL = "EMAIL"
+SENHA_DE_APP = "SENHA"
 
 # Conectar ao servidor SMTP
 servidor_email = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
@@ -18,7 +18,7 @@ servidor_email.login(EMAIL, SENHA_DE_APP)
 
 # Configuração do e-mail
 remetente = EMAIL
-destinatarios = ["marcolopee70@gmail.com"]
+destinatarios = ["DESTINATARIO"]
 assunto = "Relatório de Cripto Moedas"
 conteudo = "Segue em anexo o relatório de valorização de criptomoedas."
 
