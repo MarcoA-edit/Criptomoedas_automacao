@@ -5,7 +5,7 @@ Este projeto automatiza a coleta, análise e envio de um relatório contendo inf
 
 ## 🛠 Tecnologias Utilizadas
 - **Python**
-- **Bibliotecas:** `pycoingecko`, `pandas`, `smtplib`, `email.mime`, `mimetypes`
+- **Bibliotecas:** `ccxt`, `pycoingecko`, `pandas`, `smtplib`, `email.mime`, `mimetypes`
 
 ## 🚀 Como Funciona
 1. **Coleta de dados**:
@@ -22,14 +22,14 @@ Este projeto automatiza a coleta, análise e envio de um relatório contendo inf
 ## 📄 Dependências
 Antes de executar o projeto, instale as dependências necessárias:
 ```bash
-pip install pycoingecko pandas
+pip install ccxt pycoingecko pandas
 ```
 
 ## 🔧 Configuração
 ### Coleta de Dados
 - A API da Binance é usada para coletar dados de: `BTC`, `ETH`, `BNB`, `ADA`, `SOL`, `HBAR`, `DOGE`.
 - O CoinGecko é utilizado para coletar dados do token `KARATE`.
-- Fique a vontade para adicionar ou remover os seus tokens de preferência.
+- Fique a vontade para adicionar ou remover tokens.
 
 ### Envio por E-mail
 1. **Crie uma senha de aplicativo no Google**
@@ -67,4 +67,3 @@ Sinta-se livre para contribuir! Envie PRs ou abra issues para melhorias.
 
 ---
 🔗 **Desenvolvido por:** Marco Antônio Gonçalves Lopes
-
