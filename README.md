@@ -3,6 +3,10 @@
 ## 📌 Descrição
 Este projeto automatiza a coleta, análise e envio de um relatório contendo informações sobre as principais criptomoedas. Ele obtém os dados em tempo real, gera um arquivo CSV e envia automaticamente para os destinatários.
 
+## 📰 Atualização
+
+Além de um relatório sobre criptomoedas, foi adicionado um código que gera um relatório sobre marcas na bolsa de valores.
+
 ## 🛠 Tecnologias Utilizadas
 - **Python**
 - **Bibliotecas:** `ccxt`, `pycoingecko`, `pandas`, `smtplib`, `email.mime`, `mimetypes`
