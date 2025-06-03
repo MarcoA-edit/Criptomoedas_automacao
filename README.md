@@ -14,7 +14,6 @@ Além de um relatório sobre criptomoedas, foi adicionado um código que gera um
 ## 🚀 Como Funciona
 1. **Coleta de dados**:
    - Obtém os valores das criptomoedas na Binance via `ccxt`.
-   - Obtém dados do token KARATE via `pycoingecko`.
 2. **Gera um relatório CSV** contendo:
    - Nome da criptomoeda
    - Valor atual em USD
